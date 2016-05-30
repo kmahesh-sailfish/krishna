@@ -2,6 +2,8 @@
  * Created by rubhu on 5/30/2016.
  */
 var express = require('express');
+var debug = require('debug');
+var http =require('http');
 
 var app = express();
 
@@ -17,5 +19,18 @@ res.type('application/json');
 });
 
 
+var port = process.env.PORT || 5500;
+var server = http.createServer(app);
+server.listen(port, function (err) {
+    console.log('listening in http://localhost:' + port);
+    console.log(port);
+});
+server.on('listening',function(){
+    console.log('listening ---- port..');
+    var addr = server.address();
+    var bind = typeof addr === 'string'
+        ? 'pipe ' + addr
+        : 'port ' + addr.port;
+    debug('Listening on ' + bind);
+});
 
-app.listen(5500);
