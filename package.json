@@ -1,0 +1,24 @@
+{
+  "name": "krishna",
+  "version": "1.0.0",
+  "description": "heroku",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "maheh",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4",
+    "http": "0.0.0",
+    "mysql": "^2.10.2"
+  },
+  "engines": {
+    "node": "^4.4.3"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "h"
+  ]
+}
